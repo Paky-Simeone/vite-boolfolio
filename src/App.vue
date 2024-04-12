@@ -17,7 +17,7 @@ export default{
   <app-header :title="title"/>
 
   <div class="container mt-5">
-    <Project-List />
+    <project-list/>
   </div>
 
 </template>

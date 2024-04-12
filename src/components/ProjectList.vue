@@ -2,12 +2,16 @@
 import { api, store } from '../store';
 import axios from 'axios';
 
+import ProjectCard from './ProjectCard.vue';
+
 export default{
     data(){
         return{
         store,
         };
     },
+
+    components: { ProjectCard },
 
     created(){
     axios.get(api.baseUrl + 'projects').then((response) => {
@@ -18,13 +22,8 @@ export default{
 </script>
 
 <template>
-<div class="card" v-for="project in store.projects">
-  <img v-if="project.image" :src="project.image"  class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">{{ project.title }}</h5>
-    <p class="card-text">{{ project.description }}</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-  </div>
+<div class="row row-cols-4 g-3">
+  <project-card v-for="project in store.projects" :project="projects"/>
 </div>
 </template>
 
