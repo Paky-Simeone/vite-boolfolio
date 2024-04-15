@@ -14,7 +14,6 @@ export default{
 
 <template>
   <app-header :title="title"/>
-
   <div class="container mt-5">
     <router-view></router-view>
   </div>
