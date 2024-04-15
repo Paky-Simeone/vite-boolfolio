@@ -1,5 +1,5 @@
 <script>
-import AppHeader from './components/AppHeader.vue';
+import ProjectList from '../components/ProjectList.vue';
 
 export default{
   data(){
@@ -8,17 +8,12 @@ export default{
     };
   },
 
-  components: { AppHeader, },
+  components: { ProjectList },
 };
 </script>
 
 <template>
-  <app-header :title="title"/>
-
-  <div class="container mt-5">
-    <router-view></router-view>
-  </div>
-
+  <project-list />
 </template>
 
 <style lang="scss">

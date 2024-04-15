@@ -18,7 +18,7 @@ export default{
         <!-- <span :style="'background-color: ' + project.type.color" class="badge mb-2">{{ project.type.label }}</span> -->
         <h5 class="card-title">{{ project.title }}</h5>
         <p class="card-text">{{ abstract }}</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
+        <router-link :to="{ name:'project.show', params: { id: project.title} }" class="btn btn-primary">Vedi Progetto</router-link>
       </div>
       <div class="card-footer">
         <span :style="'background-color: ' + technology.color" class="badge me-2" v-for="technology in project.technologies" >{{ technology.label }}</span>
